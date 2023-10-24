@@ -13,10 +13,19 @@
 
 body {
   height: 100vh;
+  position: relative;
 }
 
 body * {
   font-family: 'Poppins', sans-serif;
+}
+
+#shadow {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: inherit;
 }
 
 #container {
@@ -68,7 +77,7 @@ body * {
   font-size: 14px;
 }
 
-#countdown-container button {
+.subscribe-button {
   cursor: pointer;
   width: fit-content;
   background: var(--purple);
@@ -78,4 +87,58 @@ body * {
   margin: 11px auto 0;
   font-size: 16px;
   border: none;
+  transition: background 0.2s;
+}
+
+.subscribe-button:hover {
+  background: rgba(108, 99, 255, 0.5);
+}
+
+.opened-modal {
+  --modal-display: flex;
+}
+
+.closed-modal {
+  --modal-display: none;
+}
+
+#subscribe-form-modal {
+  position: fixed;
+  z-index: 2;
+  top: 20%;
+  left: 35%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: var(--modal-display);
+  flex-direction: column;
+}
+
+#close-modal {
+  font-size: 32px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+#subscribe-form-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#subscribe-form-modal form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+#subscribe-form-modal form input {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid var(--black);
+  margin-top: 10px;
+}
+
+#email {
+  text-transform: lowercase;
 }

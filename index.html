@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <div id="shadow" hidden></div>
     <img src="./assets/top-image.svg" alt="Nuvem acima do foguete">
     <div id="container">
       <div id="countdown-container">
@@ -40,11 +41,27 @@
         <span id="subscribe-title">
           Inscreva-se para saber mais sobre o lançamento
         </span>
-        <button type="button">Inscreva-se</button>
+        <button class="subscribe-button" type="button">Inscreva-se</button>
       </div>
       <img src="./assets/rocket.svg" alt="Foguetes decolando">
     </div>
     <img src="./assets/bottom-image.svg" alt="Nuvem abaixo do foguete">
+    <div id="subscribe-form-modal" class="closed-modal">
+      <span id="close-modal">&times;</span>
+      <form>
+        <label for="name">
+          Insira seu nome:
+          <br>
+          <input type="text" id="name" placeholder="Nome completo" autocomplete="name" required>
+        </label>
+        <label for="email">
+          Insira seu e-mail:
+          <br>
+          <input type="email" id="email" placeholder="example@email.com" autocomplete="email" required>
+        </label>
+        <button class="subscribe-button" type="submit">Enviar</button>
+      </form>
+    </div>
     <script src="./script.js"></script>
   </body>
 

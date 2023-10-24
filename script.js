@@ -22,8 +22,36 @@ function countdown() {
   }, 1000);
 }
 
+function handleClickCloseModal() {
+  document.querySelector('#shadow').setAttribute('hidden', 'hidden');
+
+  const subscribeFormModal = document.querySelector('#subscribe-form-modal');
+  subscribeFormModal.classList.remove('opened-modal');
+  subscribeFormModal.classList.add('closed-modal');
+}
+
+function handleClickSubscribe(e) {
+  e.preventDefault();
+  document.querySelector('#shadow').removeAttribute('hidden');
+
+  const subscribeFormModal = document.querySelector('#subscribe-form-modal');
+  subscribeFormModal.classList.remove('closed-modal');
+  subscribeFormModal.classList.add('opened-modal');
+}
+
+function handleSubmitSubscribe(e) {
+  e.preventDefault();
+  const name = document.querySelector('#name').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  console.log({ name, email });
+}
+
 function main() {
   countdown();
+
+  document.querySelector('#countdown-container .subscribe-button').addEventListener('click', handleClickSubscribe);
+  document.querySelector('#close-modal').addEventListener('click', handleClickCloseModal);
+  document.querySelector('#subscribe-form-modal form').addEventListener('submit', handleSubmitSubscribe);
 }
 
 document.addEventListener('DOMContentLoaded', main);
