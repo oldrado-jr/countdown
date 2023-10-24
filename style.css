@@ -142,3 +142,50 @@ body * {
 #email {
   text-transform: lowercase;
 }
+
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  body:has(.opened-modal) {
+    overflow-y: hidden;
+  }
+
+  #rocket {
+    display: none;
+  }
+
+  #shadow {
+    display: none;
+    position: initial;
+    z-index: initial;
+    width: 0;
+    height: 0;
+  }
+
+  #container {
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #countdown-title {
+    font-size: 16px;
+  }
+
+  #countdown-timer-container {
+    font-size: 38px;
+  }
+
+  #subscribe-form-modal {
+    z-index: 1;
+    inset: 0;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+
+  #subscribe-form-modal form input {
+    width: 100%;
+  }
+}
