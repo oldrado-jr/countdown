@@ -20,6 +20,10 @@ body * {
   font-family: 'Poppins', sans-serif;
 }
 
+img:not(#rocket) {
+  width: 100%;
+}
+
 #shadow {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -143,16 +147,24 @@ body * {
   text-transform: lowercase;
 }
 
+@media (min-width: 701px) and (max-width: 1360px) {
+  #rocket {
+    display: none;
+  }
+
+  #container {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 700px) {
   body {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
-  body:has(.opened-modal) {
-    overflow-y: hidden;
-  }
-
-  #rocket {
+  img {
     display: none;
   }
 
