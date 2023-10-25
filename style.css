@@ -109,7 +109,7 @@ img:not(#rocket) {
 #subscribe-form-modal {
   position: fixed;
   z-index: 2;
-  inset: 5% 20%;
+  inset: 1% 20%;
   background: #ffffff;
   padding: 20px;
   border-radius: 10px;
