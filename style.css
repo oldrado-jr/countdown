@@ -130,7 +130,7 @@ img:not(#rocket) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 #subscribe-form-modal form label {
@@ -143,7 +143,6 @@ img:not(#rocket) {
   font-size: 16px;
   padding: 10px;
   border: 1px solid var(--black);
-  margin-top: 10px;
 }
 
 #email {
@@ -159,6 +158,13 @@ img:not(#rocket) {
     margin: 0;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (max-height: 330px) {
+  #subscribe-form-modal {
+    inset: 0 20%;
+    overflow-y: auto;
   }
 }
 
