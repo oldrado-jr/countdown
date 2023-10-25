@@ -109,13 +109,14 @@ img:not(#rocket) {
 #subscribe-form-modal {
   position: fixed;
   z-index: 2;
-  top: 20%;
-  left: 35%;
+  inset: 5% 20%;
   background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   display: var(--modal-display);
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #close-modal {
@@ -127,6 +128,8 @@ img:not(#rocket) {
 #subscribe-form-modal form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -162,6 +165,9 @@ img:not(#rocket) {
 @media (max-width: 700px) {
   body {
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   img {
@@ -195,9 +201,5 @@ img:not(#rocket) {
     inset: 0;
     border-radius: unset;
     box-shadow: unset;
-  }
-
-  #subscribe-form-modal form input {
-    width: 100%;
   }
 }
